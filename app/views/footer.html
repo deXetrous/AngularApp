@@ -1,0 +1,55 @@
+<footer class = "row-footer">
+	<div class = "container ">
+		<div class = "row">
+			<div class="col-xs-5 col-xs-offset-2 col-sm-2 col-sm-offset-1">
+			<h1> Our Address</h1>
+				<address>
+		              Baskhari Rd, Rahul Nagar Colony<br> Nasirpur, Akbarpur, Ambedkar Nagar<br> Uttar Pradesh 224122
+		              <br>
+		              <span class= "glyphicon glyphicon-phone"></span>: +08126631358<br>
+		              <span class= "glyphicon glyphicon-earphone"></span>: +07054880336<br>
+		              <span class= "glyphicon glyphicon-earphone"></span></i>: +07081994654<br>
+		              <span class= "glyphicon glyphicon-envelope"></span>: 
+                         <a href="mailto:dr.gyandeep@gmail.com">
+                         hairSkinClinic@hospital.net</a>
+                    </address>
+			</div>
+			<div class="col-xs-10 col-xs-offset-1 col-sm-5 col-sm-offset-1">
+				<div id="map" style="width:100%;height:400px;"></div>
+			</div>
+		    <div class="col-xs-5 col-xs-offset-2 col-sm-2 col-sm-offset-1">
+		    	<h2>Links</h2>
+                    <ul class="list-unstyled">
+                    	<li><a ui-sref="app">Home</a></li>
+                        <li><a ui-sref="app.hairTransplant">Hair Transplant</a></li>
+                        <li><a ui-sref="app.diodeHairRemoval">Diode Hair Removal</a></li>
+                        <li><a href="https://d396qusza40orc.cloudfront.net/phoenixassets/web-frameworks/index.html#">Menu</a></li>
+                        <li><a href="https://d396qusza40orc.cloudfront.net/phoenixassets/web-frameworks/index.html#">Contact</a></li>
+                        <li><a href="https://d396qusza40orc.cloudfront.net/phoenixassets/web-frameworks/index.html#">About</a></li>
+                        <li><a href="https://d396qusza40orc.cloudfront.net/phoenixassets/web-frameworks/index.html#">Menu</a></li>
+                        <li><a href="https://d396qusza40orc.cloudfront.net/phoenixassets/web-frameworks/index.html#">Contact</a></li>
+                        <li><a href="https://d396qusza40orc.cloudfront.net/phoenixassets/web-frameworks/index.html#">Contact</a></li>
+                    </ul>
+			</div>
+			<div class = "col-xs-12">
+				<p style="padding:10px;"></p>
+                <p align="center">© Copyright 2017 HAIR, SKIN, COSMETIC & LASER CLINIC</p>
+			</div>
+		</div>
+	</div>
+</footer>
+<script>
+function initMap() {
+
+	var location = {lat: 26.442958, lng: 82.559395};
+	var map = new google.maps.Map(document.getElementById("map"),{
+		zoom: 6,
+		center: location
+	});
+    var marker = new google.maps.Marker({
+    	position: location,
+    	map: map
+    });
+}
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBScXT-FpInO1bdeFEzehr7PtLMlglTGS4&callback=initMap"></script>

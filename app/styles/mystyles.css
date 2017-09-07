@@ -1,0 +1,270 @@
+.row-header {
+  margin: 0px auto;
+  padding: 0px 0px;
+
+}
+.row-content {
+  margin: 0px auto;
+  padding: 50px 0px;
+ border-bottom: 1px ridge;
+  min-height: 400px;
+}
+.row-footer {
+  margin: 0px auto;
+  padding: 20px 0px;
+  background-color: #989898;
+  background-image: url("../images/footer-bg.png");
+  background-repeat: no-repeat;
+  /*background-size: 100% 100%;*/
+  background-position: bottom;
+}
+
+.carousel {
+  background: #e3f7f7;
+}
+.carousel .item {
+  height: 600px;
+  width:auto;
+} 
+.carousel .item img {
+  left: 0;
+  min-height: 600px;
+  position: absolute;
+  top: 0;
+}
+.carousel-inner {
+  height: 100%;
+}
+.branch{
+  width: 100%;
+  margin: 10px;
+  height: auto;
+
+}
+
+.dimension{
+  width:200px;
+  height:auto;
+  margin-bottom:50px;
+  height: 267px;
+  -webkit-transition: all 2s ease; -moz-transition: all 2s ease; -ms-transition: all 2s ease; transition: all 2s ease;
+
+}
+.zoom:hover .dimension{
+  -webkit-transition: all 2s ease; -moz-transition: all 2s ease; -ms-transition: all 2s ease; transition: all 2s ease;
+  width:300px;
+  height: auto;
+  height:400px;
+  margin-bottom: 75px
+
+}
+.fig1{
+  float:right;
+}
+.fig2{
+  float:left;
+}
+/*.dim{
+  width: 150px;
+  margin:20px;
+  height: auto;
+  max-height:200px;
+  -webkit-transition: all 2s ease; -moz-transition: all 2s ease; -ms-transition: all 2s ease; transition: all 2s ease;
+}
+.dim:hover{
+    width: 200px;
+    height: 400px;
+
+}*/
+.imagefade {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+ 
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+}
+
+
+.category:hover .imagefade {
+  opacity: 0.3;
+  
+}
+
+.category:hover .middle {
+  opacity: 0.9;
+}
+
+.text {
+  /*background-color: #5CB3FF;*/
+  color: #CD853F  ;
+  font-size: 16px;
+  padding: 16px 32px;
+
+}
+
+#navbar{
+  font-family: 'Quantico';
+}
+.navbar-fixed-top {
+  min-height: 80px;
+}
+.navbar-inverse {
+  background: #989898!important;
+  color: #ffffff;
+  border: 0 !important;
+  box-shadow: none;
+}
+.navbar-inverse .navbar-nav > .active > a {
+  background: #1a237e;
+  color: #ffffff;
+}
+.navbar-inverse .navbar-nav > .active > a:hover {
+  background: #1a237e;
+  color: #ffffff;
+}
+.navbar-inverse .navbar-nav > .active > a:focus {
+  background: #1a237e;
+  color: #ffffff;
+}
+.navbar-inverse .navbar-nav > .open > a {
+  background: #1a237e;
+  color: #ffffff;
+}
+.navbar-inverse .navbar-nav > .open > a:hover {
+  background: #1a237e;
+  color: #ffffff;
+}
+.navbar-inverse .navbar-nav > .open > a:focus {
+  background: #1a237e;
+  color: #ffffff;
+}
+.navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
+  background-color: #303f9f;
+  color: #eeeeee;
+}
+.navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover {
+  color: #000000;
+}
+.navbar-inverse .navbar-nav .open .dropdown-menu {
+  background-color: #303f9f;
+  color: #eeeeee;
+}
+address {
+  color: #0f0f0f;
+  font-size: 80%;
+  margin: 0px;
+}
+body {
+  align: center;
+  padding: 50px 0px 0px 0px;
+  z-index: 0;
+}
+.tab-content {
+  border-bottom: 1px solid #dddddd;
+  border-left: 1px solid #dddddd;
+  border-right: 1px solid #dddddd;
+  padding: 10px;
+}
+.affix {
+  top: 100px;
+}
+#carouselButtons {
+  bottom: 0px;
+  position: absolute;
+  right: 0px;
+}
+
+/*
+.carousel.fade {
+     opacity: 1;
+}
+.carousel.fade .item {
+    transition: opacity ease-out .7s;
+    left: 0;
+    opacity: 0; 
+    top: 0;
+    position: absolute;
+    width: 100%;
+    display: block;
+}
+.carousel.fade .item:first-child {
+    top: auto;
+    opacity: 1; 
+    position: relative;
+}
+.carousel.fade .item.active {
+    opacity: 1;
+}
+*/
+.carousel-fade .carousel-inner .item {
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 4s;
+  transition-timing-function:linear;
+}
+
+.carousel-fade .carousel-inner .active {
+  opacity: 1;
+}
+
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+}
+
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1;
+}
+
+.carousel-fade .carousel-control {
+  z-index: 2;
+}
+
+/*
+WHAT IS NEW IN 3.3: "Added transforms to improve carousel performance in modern browsers."
+now override the 3.3 new styles for modern browsers & apply opacity
+*/
+@media all and (transform-3d), (-webkit-transform-3d) {
+    .carousel-fade .carousel-inner > .item.next,
+    .carousel-fade .carousel-inner > .item.active.right {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+    .carousel-fade .carousel-inner > .item.prev,
+    .carousel-fade .carousel-inner > .item.active.left {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+    .carousel-fade .carousel-inner > .item.next.left,
+    .carousel-fade .carousel-inner > .item.prev.right,
+    .carousel-fade .carousel-inner > .item.active {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+}
+.slick-frame {
+    visibility: hidden;
+}
+.slick-frame.slick-initialized {
+    visibility: visible;
+}
+
+
